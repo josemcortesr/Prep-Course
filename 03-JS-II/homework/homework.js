@@ -1,6 +1,6 @@
 // No cambies los nombres de las funciones.
 
-const { numeroRandom } = require("../../02-JS-I/homework/homework");
+const { numeroRandom, suma } = require("../../02-JS-I/homework/homework");
 
 function obtenerMayor(x, y) {
   // "x" e "y" son números enteros (int).
@@ -178,12 +178,23 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  var array =[]
+  for (var i = 0; i <= 10; i++) {
+    var aux = 6*i
+    array.push (aux)
+    
+  }
+  return array
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
+  var coso = numero.toString();
+  if (coso.length===3){
+    return true
+  }
+  else return false
   
 }
 
@@ -191,6 +202,13 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var i  = 0
+  var resultado = numero
+  do {
+      resultado += 5;
+    i++
+  } while (i<8);
+  return resultado
 }
 
 
